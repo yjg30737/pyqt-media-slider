@@ -10,11 +10,10 @@ class MusicSlider(QSlider):
 
     def __init__(self):
         super().__init__()
+        self.__pressed = None
         self.__initUi()
 
-    def __initUi_initUi(self):
-        self.__pressed = None
-
+    def __initUi(self):
         self.setOrientation(Qt.Horizontal)
 
         PyQtResourceHelper.setStyleSheet([self], ['style/slider.css'])
