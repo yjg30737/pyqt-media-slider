@@ -21,35 +21,32 @@ class MusicSlider(QSlider):
 
         self.setMouseTracking(True)
 
+    def __setPositionAndGetValue(self, e):
+        x = e.pos().x()
+        value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
+        self.setValue(value)
+        return value
+
     def mousePressEvent(self, e):
         if e.button() == Qt.LeftButton:
             self.__pressed = True
-            # todo pause slider when pressed
-
             e.accept()
-            x = e.pos().x()
-            value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
-            self.setValue(value)
+            value = self.__setPositionAndGetValue(e)
             self.seeked.emit(value)
         return super().mousePressEvent(e)
 
     def mouseMoveEvent(self, e):
         if self.__pressed:
             e.accept()
-            x = e.pos().x()
-            value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
-            self.setValue(value)
+            value = self.__setPositionAndGetValue(e)
             self.updatePosition.emit(value)
         return super().mouseMoveEvent(e)
 
     def mouseReleaseEvent(self, e):
         if e.button() == Qt.LeftButton:
             self.__pressed = False
-
             e.accept()
-            x = e.pos().x()
-            value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
-            self.setValue(value)
+            value = self.__setPositionAndGetValue(e)
             self.seeked.emit(value)
         return super().mouseReleaseEvent(e)
 
