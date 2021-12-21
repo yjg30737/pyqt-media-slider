@@ -11,7 +11,7 @@ PyQt5 >= 5.8
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
 
 ## Detailed Description
-This is QSlider which supports the draggable handle. But i'm still working because there is a couple of flaws.
+This is QSlider which supports the smoothly draggable handle for media(audio, video). But i'm still working because there is a couple of flaws.
 Sorry about that.
 
 ## Example
