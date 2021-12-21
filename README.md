@@ -1,5 +1,5 @@
 # pyqt-music-slider
-PyQt music slider
+This is QSlider which supports the smoothly draggable handle for media(audio, video).
 
 ## Requirements
 PyQt5 >= 5.8
@@ -10,8 +10,8 @@ PyQt5 >= 5.8
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
 
-## Detailed Description
-This is QSlider which supports the smoothly draggable handle for media(audio, video). But i'm still working because there is a couple of flaws.
+## Note
+I'm still working because there is a couple of flaws like inaccurate placement of handle.
 Sorry about that.
 
 ## Example
