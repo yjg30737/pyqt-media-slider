@@ -33,6 +33,9 @@ class MusicSlider(QSlider):
     def mousePressEvent(self, e):
         if e.button() == Qt.LeftButton:
             self.__pressed = True
+            e.accept()
+            value = self.__setPositionAndGetValue(e)
+            self.seeked.emit(value)
 
     def mouseMoveEvent(self, e):
         if self.__pressed:
