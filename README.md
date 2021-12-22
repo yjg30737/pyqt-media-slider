@@ -10,6 +10,10 @@ PyQt5 >= 5.8
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
 
+## Signal
+* seeked(int) -> Signal emit when press or release the handle
+* updatePosition(int) -> Signal emit when move the handle
+
 ## Example
 ```python
 from PyQt5.QtCore import pyqtSignal
@@ -19,13 +23,12 @@ from pyqt_music_slider.musicSlider import MusicSlider
 
 
 class MusicSliderExample(QWidget):
-    played = pyqtSignal(bool)
 
-    def __init__(self, slider=None):
+    def __init__(self):
         super().__init__()
         self.__initUi(slider)
 
-    def __initUi(self, slider=None):
+    def __initUi(self):
         self.__slider = MusicSlider()
         self.__slider.updatePosition.connect(self.updatePosition)
 
