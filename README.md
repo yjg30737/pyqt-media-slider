@@ -11,8 +11,8 @@ PyQt5 >= 5.8
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
 
 ## Signal
-* seeked(int) -> Signal emit when press or release the handle
-* updatePosition(int) -> Signal emit when move the handle
+* ```seeked(int)```: Signal emit when press or release the handle
+* ```updatePosition(int)```: Signal emit when move the handle
 
 ## Example
 ```python
