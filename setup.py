@@ -12,7 +12,6 @@ setup(
     url='https://github.com/yjg30737/pyqt-music-slider.git',
     install_requires=[
         'PyQt5>=5.8',
-        'mutagen>=1.45.1',
         'pyqt-resource-helper @ git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main'
     ]
 )
