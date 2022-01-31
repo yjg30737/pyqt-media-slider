@@ -26,7 +26,7 @@ class MusicSliderExample(QWidget):
 
     def __init__(self):
         super().__init__()
-        self.__initUi(slider)
+        self.__initUi()
 
     def __initUi(self):
         self.__slider = MusicSlider()
@@ -52,7 +52,9 @@ if __name__ == "__main__":
 
 Result
 
-https://user-images.githubusercontent.com/55078043/147012126-a0f6cc68-8403-4c61-97f6-e1931395f722.mp4
+https://user-images.githubusercontent.com/55078043/151730656-42ecb8e1-3987-415c-bc5f-8ae1d10bf2e6.mp4
+
+
 
 
 
