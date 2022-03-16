@@ -52,7 +52,3 @@ class MusicSlider(QSlider):
             value = self.__setPositionAndGetValue(e)
             self.seeked.emit(value)
         return super().mouseReleaseEvent(e)
-
-    def resizeEvent(self, e):
-        self.setRange(0, self.width())
-        return super().resizeEvent(e)
