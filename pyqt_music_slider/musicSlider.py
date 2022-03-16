@@ -22,8 +22,7 @@ class MusicSlider(QSlider):
         self.setMouseTracking(True)
 
     def __setPositionAndGetValue(self, e):
-        x = e.pos().x()
-        value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
+        value = e.pos().x()
         if value < 0:
             value = 0
         elif value >= self.maximum():
