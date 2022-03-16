@@ -23,14 +23,13 @@ class MusicSlider(QSlider):
 
     def __setPositionAndGetValue(self, e):
         x = e.pos().x()
-        if x >= self.maximum():
-            return self.maximum()
-        else:
-            value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
-            if value < 0:
-                value = 0
-            self.setValue(value)
-            return value
+        value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
+        if value < 0:
+            value = 0
+        elif value >= self.maximum():
+            value = self.maximum()
+        self.setValue(value)
+        return value
 
     def mousePressEvent(self, e):
         if e.button() == Qt.LeftButton:
