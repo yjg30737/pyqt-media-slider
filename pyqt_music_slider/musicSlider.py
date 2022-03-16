@@ -27,6 +27,8 @@ class MusicSlider(QSlider):
             return self.maximum()
         else:
             value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
+            if value < 0:
+                value = 0
             self.setValue(value)
             return value
 
