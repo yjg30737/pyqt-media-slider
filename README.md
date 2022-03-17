@@ -12,6 +12,7 @@ PyQt5 >= 5.8
 
 ## Signal
 * ```pressed(int)``` Signal emit when presses the handle
+* ```dragged(int)``` Signal emit when drags the handle
 * ```released(int)``` Signal emit when releases the handle
 
 ## Example
