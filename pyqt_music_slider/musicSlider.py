@@ -6,6 +6,7 @@ from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
 
 class MusicSlider(QSlider):
     pressed = pyqtSignal(int)
+    dragged = pyqtSignal(int)
     released = pyqtSignal(int)
 
     def __init__(self):
@@ -42,6 +43,7 @@ class MusicSlider(QSlider):
         if self.__pressed:
             e.accept()
             value = self.__setPositionAndGetValue(e)
+            self.dragged.emit(value)
         return super().mouseMoveEvent(e)
 
     def mouseReleaseEvent(self, e):
