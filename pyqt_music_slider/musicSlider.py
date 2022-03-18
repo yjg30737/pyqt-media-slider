@@ -24,6 +24,12 @@ class MusicSlider(QSlider):
 
     def __setPositionAndGetValue(self, e):
         x = e.pos().x()
+
+        if x > self.width() / 2:
+            x += min(3, (x - self.width() / 2) / (self.width() / 2 / 3))
+        elif self.width() / 2 > x > 0:
+            x -= min(3, self.width() / 2 / x)
+
         value = self.minimum() + (self.maximum() - self.minimum()) * x / self.width()
         if value < 0:
             value = 0
