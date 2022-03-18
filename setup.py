@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='pyqt-music-slider',
-    version='0.1.2',
+    version='0.1.3',
     author='Jung Gyu Yoon',
     author_email='yjg30737@gmail.com',
     license='MIT',
