@@ -1,3 +1,7 @@
+QSlider {
+    margin: 3px;
+}
+
 QSlider::groove:horizontal {
     border: 1px solid #999999;
     height: 3px;
