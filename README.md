@@ -18,7 +18,6 @@ PyQt5 >= 5.8
 ## Example
 
 ```python
-from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QApplication
 
 from pyqt_media_slider.mediaSlider import MediaSlider
