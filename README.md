@@ -1,11 +1,11 @@
-# pyqt-music-slider
+# pyqt-media-slider
 This is QSlider which supports the smoothly draggable handle, direct handle placement to click position for media(audio, video).
 
 ## Requirements
 PyQt5 >= 5.8
 
 ## Setup
-```pip3 install git+https://github.com/yjg30737/pyqt-music-slider.git --upgrade```
+```pip3 install git+https://github.com/yjg30737/pyqt-media-slider.git --upgrade```
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
@@ -24,7 +24,7 @@ from PyQt5.QtWidgets import QWidget, QHBoxLayout, QApplication
 from pyqt_media_slider.mediaSlider import MediaSlider
 
 
-class MusicSliderExample(QWidget):
+class MediaSliderExample(QWidget):
 
     def __init__(self):
         super().__init__()
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     import sys
 
     app = QApplication(sys.argv)
-    player = MusicSliderExample()
+    player = MediaSliderExample()
     player.show()
     app.exec_()
 ```
