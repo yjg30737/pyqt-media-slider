@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pyqt_music_slider.iml" filepath="$PROJECT_DIR$/.idea/pyqt_music_slider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pyqt_media_slider.iml" filepath="$PROJECT_DIR$/.idea/pyqt_media_slider.iml" />
     </modules>
   </component>
 </project>
