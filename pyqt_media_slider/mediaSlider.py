@@ -4,7 +4,7 @@ from PyQt5.QtCore import Qt, pyqtSignal
 from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
 
 
-class MusicSlider(QSlider):
+class MediaSlider(QSlider):
     pressed = pyqtSignal(int)
     dragged = pyqtSignal(int)
     released = pyqtSignal(int)

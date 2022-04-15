@@ -16,11 +16,12 @@ PyQt5 >= 5.8
 * ```released(int)``` Signal emit when releases the handle
 
 ## Example
+
 ```python
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QApplication
 
-from pyqt_music_slider.musicSlider import MusicSlider
+from pyqt_media_slider.mediaSlider import MediaSlider
 
 
 class MusicSliderExample(QWidget):
@@ -30,10 +31,11 @@ class MusicSliderExample(QWidget):
         self.__initUi()
 
     def __initUi(self):
-        self.__slider = MusicSlider()
+        self.__slider = MediaSlider()
         lay = QHBoxLayout()
         lay.addWidget(self.__slider)
         self.setLayout(lay)
+
 
 if __name__ == "__main__":
     import sys
