@@ -18,7 +18,6 @@ class MediaSlider(QSlider):
         self.setOrientation(Qt.Horizontal)
 
         PyQtResourceHelper.setStyleSheet([self], ['style/slider.css'])
-        self.setFixedHeight(20)
         self.setRange(0, 10000)
 
         self.setMouseTracking(True)
