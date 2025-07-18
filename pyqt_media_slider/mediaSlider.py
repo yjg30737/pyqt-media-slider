@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QSlider
-from PyQt5.QtCore import Qt, pyqtSignal
+from PyQt6.QtWidgets import QSlider
+from PyQt6.QtCore import Qt, pyqtSignal
 
 from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
 
@@ -15,7 +15,7 @@ class MediaSlider(QSlider):
         self.__initUi()
 
     def __initUi(self):
-        self.setOrientation(Qt.Horizontal)
+        self.setOrientation(Qt.Orientation.Horizontal)
 
         PyQtResourceHelper.setStyleSheet([self], ['style/slider.css'])
         self.setRange(0, 10000)
@@ -41,7 +41,7 @@ class MediaSlider(QSlider):
         return value
 
     def mousePressEvent(self, e):
-        if e.button() == Qt.LeftButton:
+        if e.button() == Qt.MouseButton.LeftButton:
             self.__pressed = True
             e.accept()
             value = self.__setPositionAndGetValue(e)
@@ -55,7 +55,7 @@ class MediaSlider(QSlider):
         return super().mouseMoveEvent(e)
 
     def mouseReleaseEvent(self, e):
-        if e.button() == Qt.LeftButton:
+        if e.button() == Qt.MouseButton.LeftButton:
             self.__pressed = False
             e.accept()
             value = self.__setPositionAndGetValue(e)

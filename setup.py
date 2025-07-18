@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 setup(
     name='pyqt-media-slider',
-    version='0.0.13',
+    version='0.0.14',
     author='Jung Gyu Yoon',
     author_email='yjg30737@gmail.com',
     license='MIT',
@@ -20,7 +20,7 @@ setup(
     long_description_content_type='text/markdown',
     long_description=long_description,
     install_requires=[
-        'PyQt5>=5.8',
-        'pyqt-resource-helper>=0.0.1'
+        'pyqt-resource-helper>=0.0.15',
+        'PyQt6>=6.5.0'
     ]
 )
